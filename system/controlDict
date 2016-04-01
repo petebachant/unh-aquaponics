@@ -106,6 +106,7 @@ functions
         }
     }
 
+<<<<<<< HEAD
     //#include "scalarTransport"
 
   //   S
@@ -156,6 +157,34 @@ functions
                }
           };
       }
+=======
+    dyeTransport
+    {
+        type            scalarTransport;
+        functionObjectLibs ("libutilityFunctionObjects.so");
+        outputControl   outputTime;
+        resetOnStartUp  false;
+        autoSchemes     true;
+        fvOptions
+        {
+            S-01
+            {
+                type scalarExplicitSetValue;
+                active true;
+                selectionMode cellZone;
+                cellZone sampleInlet;
+                scalarExplicitSetValueCoeffs
+                {
+                    injectionRate
+                    {
+                        S 1;
+                    }
+                }
+            }
+        }
+    }
+
+>>>>>>> e4a3d7467ff51f9257d95fbea70fcbff74cc1612
 }
 
 // ************************************************************************* //
