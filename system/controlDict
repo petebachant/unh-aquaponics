@@ -106,58 +106,6 @@ functions
         }
     }
 
-<<<<<<< HEAD
-    //#include "scalarTransport"
-
-  //   S
-  //   {
-  //       type            scalarTransport;
-  //       functionObjectLibs ("libutilityFunctionObjects.so");
-	//       enabled 	true;
-	//       outputControl   outputTime;
-	//       setFormat       csv;
-	//       write interval  1;
-  //       resetOnStartUp  false;
-  //       autoSchemes     true;
-  //       write 		true;
-	//       log		true;
-  //
-	// DT 10e-9;
-	// fvOptions {};
-  //
-	// #includeEtc "caseDicts/postProcessing/scalarTransport/scalarTransportDict.cfg"
-  //   }
-
-  S
-      {
-          type            scalarTransport;
-          outputControl   outputTime;
-          resetOnStartUp  false;
-          autoSchemes     true;
-          fvOptions
-          {
-               SetS
-               {
-               type            scalarExplicitSetValue;
-               active          true;
-
-
-               scalarExplicitSetValueCoeffs
-                   {
-                     selectionMode   points;
-                     points
-                     (
-                       (0.1397 0.1397 0)
-                     );
-                       injectionRate
-                       {
-                           S   1.0;
-                       }
-                   }
-               }
-          };
-      }
-=======
     dyeTransport
     {
         type            scalarTransport;
@@ -183,8 +131,6 @@ functions
             }
         }
     }
-
->>>>>>> e4a3d7467ff51f9257d95fbea70fcbff74cc1612
 }
 
 // ************************************************************************* //
